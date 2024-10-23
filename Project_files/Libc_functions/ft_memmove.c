@@ -1,47 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/23 23:07:55 by abougati          #+#    #+#             */
+/*   Updated: 2024/10/23 23:07:56 by abougati         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-
-void *ft_memmove(void* dest, const void* src,  size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    char* d1= dest ;
-    const char* s1 =src;
+	char		*d1;
+	const char	*s1 = src;
 
-    if ( s1 > d1)
-    {
-    while ( n-- )
-        *d1++ = *s1++;
-    }
-
-    else 
-    {
-        s1+= n-1;
-        d1+= n-1;
-        while (n--)
-        {
-            *d1--=*s1--;
-        }
-    }
-
-    return (void *) dest ;
+	d1 = dest;
+	if (s1 > d1)
+	{
+		while (n--)
+			*d1++ = *s1++;
+	}
+	else
+	{
+		s1 += n - 1;
+		d1 += n - 1;
+		while (n--)
+		{
+			*d1-- = *s1--;
+		}
+	}
+	return ((void *)dest);
 }
 
-
-int main ()
+int	main(void)
 {
-    int i;
+	int i;
 
-    char dest[4];
-    const char src[4]="abcd";
+	char dest[4];
+	const char src[4] = "abcd";
 
+	ft_memmove(dest, src, 3);
 
-    ft_memmove( dest , src , 3 );  
-    
-    for(i=0 ; i<4 ; i++)
-        printf("%c" , src[i]);
+	for (i = 0; i < 4; i++)
+		printf("%c", src[i]);
 
-    printf("\n");
+	printf("\n");
 
-    for(i=0 ; i<4; i++)
-        printf("%c" , dest[i]);
-   
+	for (i = 0; i < 4; i++)
+		printf("%c", dest[i]);
 }

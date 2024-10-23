@@ -1,19 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/23 23:07:59 by abougati          #+#    #+#             */
+/*   Updated: 2024/10/23 23:08:00 by abougati         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-char *ft_memset (void *dest, int c, size_t n)
+char	*ft_memset(void *dest, int c, size_t n)
 {
-    unsigned char* pointer = dest ;
+	unsigned char	*pointer;
 
-    while (n >0)
-    {
-        *pointer=c;
-        pointer++;
-        n--;
-    }
-
-    return dest;
+	pointer = dest;
+	while (n > 0)
+	{
+		*pointer = c;
+		pointer++;
+		n--;
+	}
+	return (dest);
 }
-
 
 // int main ()
 // {
@@ -21,10 +32,9 @@ char *ft_memset (void *dest, int c, size_t n)
 
 //     char buff[4];
 
-
-//     ft_memset( buff , 'a' , sizeof(char)*2);  
+//     ft_memset( buff , 'a' , sizeof(char)*2);
 //     ft_memset( buff+2 , 'b' , sizeof(char)*2);
-    
+
 //     for(i=0 ; i<4 ; i++)
 //         printf("%c" , buff[i]);
 
