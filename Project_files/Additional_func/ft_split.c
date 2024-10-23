@@ -51,7 +51,7 @@ char	*word(char *str, char c)
 	return (my_word);
 }
 
-char ** ft_strsplit(char const *s, char c)
+char ** ft_split(char const *s, char c)
 {
 	if(!s)
 		return NULL;
@@ -72,13 +72,13 @@ char ** ft_strsplit(char const *s, char c)
 			if(*s)
 			{
 				arr_of_str[i]=word((char *)s,c);    //we can add a free function in case not all memory allocations succeed .
-			// 	if (!arr_of_str[i])  // If allocation fails, free previously allocated words
-            // {
-            //     while (i > 0)  // Free allocated words up to the point of failure
-            //         free(arr_of_str[--i]);
-            //     free(arr_of_str);  // Free the array itself
-            //     return NULL;
-            // }
+				if (!arr_of_str[i])  // If allocation fails, free previously allocated words
+            {
+                while (i > 0)  // Free allocated words up to the point of failure
+                    free(arr_of_str[--i]);
+                free(arr_of_str);  // Free the array itself
+                return NULL;
+            }
 			i++;
 			}
 			while(*s && *s!= c)

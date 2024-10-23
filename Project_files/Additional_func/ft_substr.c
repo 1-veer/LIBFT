@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-char * ft_strsub(char const *s, unsigned int start, size_t len)
+char * ft_substr(char const *s, unsigned int start, size_t len)
 {
     char *substr;
 
