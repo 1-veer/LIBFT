@@ -6,11 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:07:55 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:07:56 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:47:18 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

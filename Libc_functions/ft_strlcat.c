@@ -6,9 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:08:41 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:08:42 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:49:11 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 unsigned int	*ft_strlcat(char *dst, const char *src, unsigned int size)
 {

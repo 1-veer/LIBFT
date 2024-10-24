@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abougati <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:04:44 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:04:49 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:58:25 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -36,12 +38,4 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-/*
- #include <stdio.h>
 
-int main ()
-{
-	printf("%d" , ft_atoi("   \t\t\t\n   -4444a"));
-	return (0);
-}
-*/

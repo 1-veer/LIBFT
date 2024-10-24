@@ -6,11 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:45 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:09:46 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:58:43 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putendl_fd(char const *s , int fd)
 {

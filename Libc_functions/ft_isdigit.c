@@ -6,9 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:07:26 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:07:27 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:45:03 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

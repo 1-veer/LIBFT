@@ -6,11 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:49 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:09:50 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:58:46 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void put(char c , int fd)
 {
@@ -39,8 +39,8 @@ void ft_putnbr_fd(int n , int fd)
     }
 }
 
-int main ()
-{
-    ft_putnbr_fd(10 , 1);
-    return 0;
-}
+// int main ()
+// {
+//     ft_putnbr_fd(10 , 1);
+//     return 0;
+// }

@@ -6,11 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:17 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:10:18 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:59:19 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char * ft_strmapi(char const *s, char(*f)(unsigned int, char))
 {

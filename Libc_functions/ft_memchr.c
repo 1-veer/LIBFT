@@ -6,13 +6,13 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:07:41 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/23 23:07:42 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:46:27 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*my_s = (const unsigned char *)s;
 	unsigned char		my_c;
@@ -27,24 +27,4 @@ void	*memchr(const void *s, int c, size_t n)
 	return (0);
 }
 
-// int main ()
-// {void *memchr(const void *s, int c, size_t n)
-// {
-//     while (n--)
-//     {
-//         if(*s==c)
-//             return (s);
-//         s++;
-//     }
-//     return (0);
-// }
-//     int i;
 
-//     char buff[4];
-
-//     ft_memchr( buff , 'a' , sizeof(char)*2);
-//     ft_memchr( buff+2 , 'b' , sizeof(char)*2);
-
-//     for(i=0 ; i<4 ; i++)
-//         printf("%c" , buff[i]);
-// }
