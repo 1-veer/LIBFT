@@ -6,25 +6,25 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:08:41 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:49:11 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/26 23:27:04 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	*ft_strlcat(char *dst, const char *src, unsigned int size)
+size_t strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
-	int dst_len = 0, src_len = 0, i = 0;
+	size_t dst_len = 0, src_len = 0, i = 0;
 
 	while (dst[dst_len])
 		dst_len++;
 	while (src[src_len])
 		src_len++;
 
-	if (size < dst_len || size == 0)
-		return (src_len + size);
+	if (dstsize < dst_len || dstsize == 0)
+		return (src_len + dstsize);
 
-	while (src[i] && (dst_len + i) < size - 1)
+	while (src[i] && (dst_len + i) < dstsize - 1)
 	{
 		dst[dst_len + i] = src[i];
 		i++;
