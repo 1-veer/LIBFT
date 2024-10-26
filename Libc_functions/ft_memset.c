@@ -6,20 +6,20 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:07:59 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:47:32 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:38:39 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_memset(void *dest, int c, size_t n)
+void	*ft_memset(void *dest, int c, size_t n)
 {
-	unsigned char	*pointer;
+	unsigned char	*pointer;       //for a byte by byte setting
 
 	pointer = dest;
 	while (n > 0)
 	{
-		*pointer = c;
+		*pointer = (unsigned char)c;
 		pointer++;
 		n--;
 	}
