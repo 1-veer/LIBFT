@@ -2,7 +2,7 @@
 
 Welcome to Libft, a custom C library created as part of the 42 curriculum! This project is all about re-implementing standard C library functions to deepen our understanding of C programming, memory management, and data manipulation. The library serves as a foundation for many future projects and challenges at 42.
 
-Libft is a custom library written in C that re-implements essential C standard library functions, including operations on strings, memory, and file descriptors. It also introduces custom utility functions and a linked list manipulation module, providing a robust toolkit for use in future projects.
+ Libft is a custom library written in C that re-implements essential C standard library functions, including operations on strings, memory, and file descriptors. It also introduces custom utility functions and a linked list manipulation module, providing a robust toolkit for use in future projects.
 Features
 
     Recreation of many functions from libc.
