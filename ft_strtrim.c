@@ -6,40 +6,11 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:27 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:59:29 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/29 22:40:37 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// int ft_strlen (const char *str)
-// {
-// 	int i = 0;
-// 	while(str[i] != '\0')
-// 		i++;
-
-// 	return (i);
-// }
-// char *ft_strdup(const char *s)
-// {
-//     char *dup;
-//     int i=0;
-//     while (s[i])
-//         i++;
-    
-//     dup = (char *)malloc(sizeof(char)*(i+1));
-//     if(!dup)
-//       return NULL;
-
-//     i=0;
-//     while(s[i])
-//     {
-//         dup[i]=s[i];
-//         i++;
-//     }
-//     dup[i]='\0';
-//     return (dup);
-// }
 
 char * ft_strtrim(const char *s)
 {
@@ -66,11 +37,8 @@ char * ft_strtrim(const char *s)
        i++;
     }
     str[i]='\0';
-
     return (str);
 }
-
-// #include <stdio.h>
 
 // int main() {
 //     const char *test1 = "   Hello, World!   ";

@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:08 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:52:11 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/29 22:46:46 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
-		i++;
+	i = ft_strlen(s);
 	s += i;
-	while (i >= 0)
+	if (c == '\0')
+		return ((char *)s);  // return s pointing on null , cuz s is on the null terminator atm
+	while (i-- >= 0)
 	{
 		if (*--s == (char)c)
 			return ((char *)s);
-		i--;
 	}
 	if (c == '\0')
 		return ((char *)s);
