@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:08 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/30 08:14:17 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:29:12 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,26 @@ char	*ft_strrchr(const char *s, int c)
 }
 
 
-// int	main()
-// {
-// 	const char	*str = "Hello, world!";
-// 	char		ch = 'o';
-// 	char		*result;
+int	main()
+{
+	const char	*str = "Hello, world!";
+	char		ch = 'o';
+	char		*result;
 
-// 	result = ft_strrchr(str, ch);
-// 	if (result)
-// 		printf("Last occurrence of '%c' found at position: %ld\n", ch, result - str);
-// 	else
-// 		printf("Character '%c' not found.\n", ch);
+	result = ft_strrchr(str, ch);
+	if (result)
+		printf("Last occurrence of '%c' found at position: %ld\n", ch, result - str);
+	else
+		printf("Character '%c' not found.\n", ch);
 
 
 
-// 	// Testing with null character
-// 	result = ft_strrchr(str, '\0');
-// 	if (result)
-// 	{
-// 		printf("Null character found at position: %ld\n", result - str);
-// 	}
+	// Testing with null character
+	result = ft_strrchr(str, '\0');
+	if (result)
+	{
+		printf("Null character found at position: %ld\n", result - str);
+	}
 	
-// 	return (0);
-// }
+	return (0);
+}
