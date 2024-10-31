@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:26:37 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/30 11:10:24 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/31 22:46:51 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void                *ft_calloc(size_t count, size_t size);
 size_t				ft_strlen(const char *s);
-size_t				ft_strlcpy(char *dst, const char *src, size_t size);
-size_t				ft_strlcat(char *dst, const char *src, size_t size);
+size_t              ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t              ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack, const char *needle, size_t len);

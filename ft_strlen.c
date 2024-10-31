@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:08:52 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/29 08:20:59 by abougati         ###   ########.fr       */
+/*   Updated: 2024/10/31 23:35:52 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@
 
 	return (i);
 }
-
-// int main ()
-// {
-// 	char *s="ayoub";
-// 	printf("%zu" , ft_strlen(s));
-
-// 	return 0;
-// }

@@ -6,13 +6,13 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:36 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:58:31 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/01 00:14:56 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int num_length(int n)
+static int num_length(int n)
 {
     int len;
     len=0;
