@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayoub-bg <ayoub-bg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:17 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/31 22:43:32 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:39:44 by ayoub-bg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char * ft_strmapi(char const *s, char(*f)(unsigned int, char))
             str[i]=f(i,s[i]);
             i++;
         }
-
     str[len]='\0';
     return (str);
 }

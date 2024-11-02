@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayoub-bg <ayoub-bg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:07:50 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:47:08 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/02 19:50:44 by ayoub-bg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char		*p1;
-	const char	*p2 = src;
+	if(dest == src || n==0)
+	return (dest);
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-	p1 = dest;
+	p1 = (unsigned char*)dest;
+	p2=  (unsigned char*)src;
 	while (n-- > 0)
 	{
 		*p1++ = *p2++;
 	}
-	return (dest);
+	return (dest);//the return as a concpet means
 }
 
 // int main ()
