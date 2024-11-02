@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayoub-bg <ayoub-bg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:35 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/29 22:36:10 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:47:04 by ayoub-bg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@ char * ft_substr(char const *s, unsigned int start, size_t len)
     return NULL;
     
     char *substr;
+    size_t i;
 
     substr = malloc(sizeof(char)*(len + 1));
         if(!substr)                    //we can check also if s is valide (!s) so we won't result any errors if 's' is a NULL pointer
             return NULL;
-
-    size_t i = 0;
-
+    i = 0;
     while(i<len && s[start])
     {
         substr[i]=s[start];

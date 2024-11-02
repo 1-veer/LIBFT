@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayoub-bg <ayoub-bg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:02 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/30 11:45:48 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/02 12:41:24 by ayoub-bg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char ** ft_split(char const *s, char c)
             {
                 while (i > 0)  // Free allocated words up to the point of failure
                     free(arr_of_str[--i]);
-                free(arr_of_str);  // Free the array itself
+                free(arr_of_str);  // Free array itself
                 return NULL; 
             }
 			i++;
