@@ -50,7 +50,7 @@ char * ft_itoa(int n)
         number*=-1;
     }
                                                 //filling the str with digits from the number backwards from last index to 0;
-    while(len >=0 && str[len]!='-')         //The  str[len]!='-' is needed so we don't overwrite over the already written '-' in str[0] when the num is negative , but incase it's positive , we go through the str[len=0] since it's still empty to write our digit (first digit if the num).
+    while(len >=0 && str[len]!='-')         //The  str[len]!='-' is needed so we don't overwrite over the written '-' in str[0] when the num is negative , but incase it's positive , we go through the str[len=0] since it's still empty to write our digit (first digit if the num).
     {
         str[len--]=number % 10 + '0';
         number/=10;
