@@ -25,6 +25,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
     {
         next_current=current->next;      //we save our next node of our current node , because current is gonna be cleared ,in ordre so we don't lose track after deleting it.
         ft_lstdelone(current , del);       //clearing the current
+        free(current);
         current=next_current;             //setting the current back to be the next node.
     }
     
