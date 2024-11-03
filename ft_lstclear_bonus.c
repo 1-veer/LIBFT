@@ -14,18 +14,17 @@
 
 void ft_lstclear(t_list **lst, void (*del)(void*))
 {
+    t_list *current ;
+    t_list *next_current;
+    
     if(!lst || !del)
         return ;
-
-    t_list *current , *next_current;
-
     current= *lst;
     
     while(current!=NULL)
     {
         next_current=current->next;      //we save our next node of our current node , because current is gonna be cleared ,in ordre so we don't lose track after deleting it.
         ft_lstdelone(current , del);       //clearing the current
-        free(current);
         current=next_current;             //setting the current back to be the next node.
     }
     

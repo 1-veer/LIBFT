@@ -22,3 +22,6 @@ void ft_lstadd_front(t_list **lst, t_list *new)
                         // N.B : head == the first link of a list.
                                  //since new is just a pointer to a node not a node itself. 
 }
+
+new->next = *lst;
+*lst = new ;
