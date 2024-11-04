@@ -12,7 +12,8 @@
 
 #include "libft.h"
 
-void ft_putstr_fd(char const *s , int fd)
+void ft_putstr_fd(char *s, int fd)
+
 {
     int i;
     i=0;
@@ -23,3 +24,20 @@ void ft_putstr_fd(char const *s , int fd)
         i++;
     }
 }
+
+// #include <fcntl.h>
+
+// int main() {
+//     char* c = "Ayoub";
+//     int fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
+//     if (fd == -1) {
+//         printf("Error opening file\n");
+//         return 1;
+//     }
+
+//     ft_putstr_fd(c, fd);
+//     close(fd);
+
+//     printf("Character '%s' written to 'output.txt'\n", c);
+//     return 0;
+// }

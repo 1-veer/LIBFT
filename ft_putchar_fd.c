@@ -16,3 +16,21 @@ void ft_putchar_fd(char c , int fd)
 {
     write( fd , &c , 1);
 }
+
+// #include <fcntl.h>
+
+// int main() {
+//     char c = 'A';
+//     int fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
+//     if (fd == -1) {
+//         printf("Error opening file\n");
+//         return 1;
+//     }
+
+//     ft_putchar_fd(c, fd);
+//     close(fd);
+
+//     printf("Character '%c' written to 'output.txt'\n", c);
+//     return 0;
+// }
+

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void put(char c , int fd)
+static void put(char c , int fd)
 {
     write ( fd , &c , 1);
 }
@@ -39,8 +39,20 @@ void ft_putnbr_fd(int n , int fd)
     }
 }
 
-// int main ()
-// {
-//     ft_putnbr_fd(10 , 1);
+// #include <fcntl.h>
+
+// int main() {
+//     int c = -1337;
+//     int fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
+//     if (fd == -1) {
+//         printf("Error opening file\n");
+//         return 1;
+//     }
+
+//     ft_putnbr_fd(c, fd);
+//     close(fd);
+
+//     printf("Character '%d' written to 'output.txt'\n", c);
 //     return 0;
 // }
+
