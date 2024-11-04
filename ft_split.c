@@ -99,3 +99,81 @@ char ** ft_split(char const *s, char c)
 	arr_of_str[i]=0;
 	return (arr_of_str);
 }
+
+// void print_split_result(char **result) {
+//     if (!result) {
+//         printf("NULL result\n");
+//         return;
+//     }
+    
+//     for (int i = 0; result[i] != NULL; i++) {
+//         printf("'%s'", result[i]);
+//         if (result[i + 1] != NULL)
+//             printf(", ");
+//     }
+//     printf("\n");
+// }
+
+// void free_split_result(char **result) {
+//     if (!result)
+//         return;
+        
+//     for (int i = 0; result[i] != NULL; i++)
+//         free(result[i]);
+//     free(result);
+// }
+
+// int main(void) {
+//     char **result;
+    
+//     // Test 1: Basic splitting with spaces
+//     printf("Test 1 - Basic space splitting:\n");
+//     result = ft_split("hello world test", ' ');
+//     printf("Input: \"hello world test\"\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     // Test 2: Multiple consecutive delimiters
+//     printf("\nTest 2 - Multiple consecutive delimiters:\n");
+//     result = ft_split(",,hello,,world,,test,,", ',');
+//     printf("Input: \",,hello,,world,,test,,\"\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     // Test 3: Empty string
+//     printf("\nTest 3 - Empty string:\n");
+//     result = ft_split("", ',');
+//     printf("Input: \"\"\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     // Test 4: String with only delimiters
+//     printf("\nTest 4 - Only delimiters:\n");
+//     result = ft_split("     ", ' ');
+//     printf("Input: \"     \"\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     // Test 5: NULL input
+//     printf("\nTest 5 - NULL input:\n");
+//     result = ft_split(NULL, ' ');
+//     printf("Input: NULL\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     // Test 6: Single character delimiter
+//     printf("\nTest 6 - Single character delimiter:\n");
+//     result = ft_split("a.b.c.d", '.');
+//     printf("Input: \"a.b.c.d\"\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     // Test 7: No delimiter in string
+//     printf("\nTest 7 - No delimiter in string:\n");
+//     result = ft_split("hello", ' ');
+//     printf("Input: \"hello\"\nOutput: ");
+//     print_split_result(result);
+//     free_split_result(result);
+    
+//     return (0);
+// }

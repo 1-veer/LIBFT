@@ -39,5 +39,6 @@ void ft_putstr_fd(char *s, int fd)
 //     close(fd);
 
 //     printf("Character '%s' written to 'output.txt'\n", c);
+//     printf("%d",fd);
 //     return 0;
 // }
