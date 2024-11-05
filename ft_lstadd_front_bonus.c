@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:11:05 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/26 12:30:33 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:40:08 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,3 @@ void ft_lstadd_front(t_list **lst, t_list *new)
                                  //since new is just a pointer to a node not a node itself. 
 }
 
-new->next = *lst;
-*lst = new ;

@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:08 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/30 11:29:12 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:58:33 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
-	
-	if(!s)
-		return NULL;
-	
+
 	i=0;
 	while (s[i])
 		i++;
@@ -30,33 +27,9 @@ char	*ft_strrchr(const char *s, int c)
 		if (*--s == (char)c)      //decrement then compare
 			return ((char *)s);
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);	
 	
 	return (NULL);
 }
 
-
-int	main()
-{
-	const char	*str = "Hello, world!";
-	char		ch = 'o';
-	char		*result;
-
-	result = ft_strrchr(str, ch);
-	if (result)
-		printf("Last occurrence of '%c' found at position: %ld\n", ch, result - str);
-	else
-		printf("Character '%c' not found.\n", ch);
-
-
-
-	// Testing with null character
-	result = ft_strrchr(str, '\0');
-	if (result)
-	{
-		printf("Null character found at position: %ld\n", result - str);
-	}
-	
-	return (0);
-}

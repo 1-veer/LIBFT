@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:08:58 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/30 12:06:12 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:49:34 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,4 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-
-int main ()
-{
-	char	*s1 = "ayoub";
-	char	*s2 = "ayo";
-
-	printf("%d", ft_strncmp(s1 , s2 , 5));
-	return (0);
-}
-
 

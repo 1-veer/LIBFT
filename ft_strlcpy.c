@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:08:46 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/31 22:46:00 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:53:10 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {
 	size_t	i;
-
-	if (!src || !dst)
-		return (0);
+	
 	if (dstsize == 0)
 		return (ft_strlen(src));
 	i = 0;
