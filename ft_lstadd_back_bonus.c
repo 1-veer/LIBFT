@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:11:01 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/05 21:08:21 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/05 21:18:21 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
     if(!lst || !new)
         return ;
  
-    //new->next = NULL;  //initialise new->next with null since it'll be the last node anyways
+    //new->next = NULL;  //initialise new->next with null since it'll be the last node anyways . n7ydoha hitach new given as paramter t9dr tkoun a pointer to a node deja initialised , y3ni next dyalha node akher ghir hna bghinaha tkoun lkhra f list dyalna , donc makahsnach nbdlo next dyalha
 
     if (*lst == NULL) 
         *lst = new;  
