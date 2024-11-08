@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoub-bg <ayoub-bg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:02 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/02 12:41:24 by ayoub-bg         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:34:01 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,13 @@ static char	*word(char *str, char c)
 	return (my_word);
 }
 
+static  void	free_all(char **arr, int count)
+{
+	while (count-- > 0)
+		free(arr[count]);
+	free(arr);
+}
+
 char ** ft_split(char const *s, char c)
 {
 	if(!s)
@@ -75,28 +82,25 @@ char ** ft_split(char const *s, char c)
 	arr_of_str=malloc(sizeof(char *)*(count + 1));
 		if(!arr_of_str)
 			return NULL;
-	int i;
-	i=0;
+	count=0;
 	while(*s)                                     
 	{
 		while(*s && *s== c)
 		s++;
 			if(*s)
 			{
-				arr_of_str[i]=word((char *)s,c);    //we can add a free function in case not all memory allocations succeed .
-				if (!arr_of_str[i])  // If allocation fails, free previously allocated words
+				arr_of_str[count]=word((char *)s,c);   
+				if (!arr_of_str[count]) 
             {
-                while (i > 0)  // Free allocated words up to the point of failure
-                    free(arr_of_str[--i]);
-                free(arr_of_str);  // Free array itself
+                free_all(arr_of_str,count);
                 return NULL; 
             }
-			i++;
+			count++;
 			}
 			while(*s && *s!= c)
 				s++;
 	}
-	arr_of_str[i]=0;
+	arr_of_str[count]=0;
 	return (arr_of_str);
 }
 

@@ -6,17 +6,20 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:13 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/31 23:36:41 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:21:55 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char * ft_strjoin(char const *s1, char const*s2)
-{
+{ 
     char *res;
     size_t len=ft_strlen(s1)+ft_strlen(s2);
-
+    
+    if(!s1 || !s2)
+    return NULL;
+   
     res = malloc(sizeof(char)*(len + 1));
     if(!res)
         return NULL;

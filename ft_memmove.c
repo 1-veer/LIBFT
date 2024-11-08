@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:07:55 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/26 23:24:17 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:03:09 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 // int	main(void)
 // {
-// 	int i;
+// 	// int i;
 
-// 	char dest[4];
-// 	const char src[4] = "abcd";
+// 	// char dest[4];
+// 	char *src = "abcd";
 
-// 	ft_memmove(dest, src, 3);
-
-// 	for (i = 0; i < 4; i++)
-// 		printf("%c", src[i]);
-
-// 	printf("\n");
-
-// 	for (i = 0; i < 4; i++)
-// 		printf("%c", dest[i]);
+// 	printf("%s", ft_memmove(src , src ,2));
+// 	return 0;
 // }

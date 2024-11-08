@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:08:41 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/05 20:20:08 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:23:02 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t ft_strlcat(char *  dst, const char *  src, size_t dstsize)
 {
 	size_t dst_len , src_len, i ;
-
+	
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
