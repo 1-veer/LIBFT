@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:36 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/05 20:29:52 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:37:59 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static int num_length(int n)
     if(n==0)
         return 1;
 
-    if(n<0)
-        len++;
+    if(n<=0)
+        len++;   
     while(n!=0)
     {
         len++;
@@ -39,16 +39,15 @@ char * ft_itoa(int n)
     number=n;
     len=num_length(n);
     str=malloc(sizeof(char)*(len + 1));
-        if(!str)
+    if(!str)
         return NULL;
 
     str[len--]='\0';      // terminating the string with NULL then len--;
     if(number == 0)
     {
         str[0]='0';
-        return (str);
-    }
-    if(number<0)
+        return (str);      //n = n * ((n<0)* -1 | 1 );
+    if(number<0)           //
     {
         str[0]='-';     //if the number is negative the we fill its first index with '-';
         number*=-1;
