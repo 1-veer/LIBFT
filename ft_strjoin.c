@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:10:13 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/11 17:43:05 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/14 22:24:21 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*pointer_to_res;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	else if (!s2)
+		return (ft_strdup(s1));
 	len = ft_strlen(s1) + ft_strlen(s2);
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
