@@ -12,21 +12,19 @@
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *current ;
-    t_list *next_current;
-    
-    if(!lst || !del)
-        return ;
-    current= *lst;
-    
-    while(current!=NULL)
-    {
-        next_current=current->next;      //we save our next node of our current node , because current is gonna be cleared ,in ordre so we don't lose track after deleting it.
-        ft_lstdelone(current , del);       //clearing the current
-        current=next_current;             //setting the current back to be the next node.
-    }
-    
-    *lst = NULL;   //set the head as null indicating it as an empty list.
+	t_list	*current;
+	t_list	*next_current;
+
+	if (!lst || !del)
+		return ;
+	current = *lst;
+	while (current != NULL)
+	{
+		next_current = current->next;
+		ft_lstdelone(current, del);
+		current = next_current;
+	}
+	*lst = NULL;
 }

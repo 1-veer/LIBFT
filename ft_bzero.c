@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:06:29 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:43:26 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:23:49 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,3 @@ void	ft_bzero(void *s, size_t n)
 		*p++ = 0;
 	}
 }
-
-// int	main(void)
-//{
-//	int i;
-//
-//	char s[4] = "abcd";
-//
-//	ft_bzero(s, 3);
-//
-//	for (i = 0; i < 4; i++)
-//		printf("%c", s[i]);
-//}

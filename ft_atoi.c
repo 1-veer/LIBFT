@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayoub-bg <ayoub-bg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:04:44 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/02 20:03:30 by ayoub-bg         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:05:56 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ int	ft_atoi(const char *str)
 	{
 		if (str[i] == '-')
 			sign *= -1;
-	i++;	
+		i++;
 	}
-	
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i++] - '0');

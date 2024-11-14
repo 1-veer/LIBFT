@@ -6,59 +6,60 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:36 by abougati          #+#    #+#             */
-/*   Updated: 2024/11/09 16:37:59 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:20:49 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int num_length(int n)
+static int	num_length(int n)
 {
-    int len;
-    len=0;
-    if(n==0)
-        return 1;
+	int	len;
 
-    if(n<=0)
-        len++;   
-    while(n!=0)
-    {
-        len++;
-        n=n/10;
-    }
-
-    return len;
+	len = 0;
+	if (n == 0)
+		return (1);
+	len += (n < 0);
+	while (n != 0)
+	{
+		len++;
+		n = n / 10;
+	}
+	return (len);
 }
 
-char * ft_itoa(int n)
+static char	*extra(char *str, long number, int len)
 {
-    long number;
-    int len;
-    char *str;
-
-    number=n;
-    len=num_length(n);
-    str=malloc(sizeof(char)*(len + 1));
-    if(!str)
-        return NULL;
-
-    str[len--]='\0';      // terminating the string with NULL then len--;
-    if(number == 0)
-    {
-        str[0]='0';
-        return (str);      //n = n * ((n<0)* -1 | 1 );
-    if(number<0)           //
-    {
-        str[0]='-';     //if the number is negative the we fill its first index with '-';
-        number*=-1;
-    }
-                                                //filling the str with digits from the number backwards from last index to 0;
-    while(number > 0)         //The  str[len]!='-' is needed so we don't overwrite over the written '-' in str[0] when the num is negative , but incase it's positive , we go through the str[len=0] since it's still empty to write our digit (first digit if the num).
-    {
-        str[len--]=number % 10 + '0';
-        number/=10;
-    }
-
-    return (str);
+	while (number > 0)
+	{
+		str[len--] = number % 10 + '0';
+		number /= 10;
+	}
+	return (str);
 }
 
+char	*ft_itoa(int n)
+{
+	long	number;
+	int		len;
+	char	*str;
+
+	number = n;
+	len = num_length(n);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len--] = '\0';
+	if (number == 0)
+	{
+		str[0] = '0';
+		return (str);
+	}
+	if (number < 0)
+	{
+		str[0] = '-';
+		number *= -1;
+	}
+	str = extra(str, number, len);
+	return (str);
+}

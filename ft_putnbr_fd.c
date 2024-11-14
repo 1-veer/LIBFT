@@ -6,53 +6,30 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:49 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/24 15:58:46 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/13 18:13:57 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void put(char c , int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    write ( fd , &c , 1);
+	unsigned int	nbr;
+
+	if (fd < 0)
+		return ;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbr = -n;
+	}
+	else
+		nbr = n;
+	if (nbr < 10)
+		ft_putchar_fd(nbr + '0', fd);
+	else
+	{
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putnbr_fd(nbr % 10, fd);
+	}
 }
-
-void ft_putnbr_fd(int n , int fd)
-{
-    unsigned int nbr ;
-    
-    if (n<0)
-    {
-        put('-' , fd);
-        nbr=-n;
-    }
-    else 
-        nbr=n;
-
-    if ( nbr < 10)
-        put(nbr+ '0' , fd);  //'0' is equal to 48 in terms of ASCII
-
-    else 
-    {
-        ft_putnbr_fd(nbr/10 , fd);
-        ft_putnbr_fd(nbr%10 , fd);
-    }
-}
-
-// #include <fcntl.h>
-
-// int main() {
-//     int c = -1337;
-//     int fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
-//     if (fd == -1) {
-//         printf("Error opening file\n");
-//         return 1;
-//     }
-
-//     ft_putnbr_fd(c, fd);
-//     close(fd);
-
-//     printf("Character '%d' written to 'output.txt'\n", c);
-//     return 0;
-// }
-

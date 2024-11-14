@@ -6,7 +6,7 @@
 /*   By: abougati <abougati@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 23:09:20 by abougati          #+#    #+#             */
-/*   Updated: 2024/10/29 08:13:13 by abougati         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:23:18 by abougati         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-// int main ()
-// {
-// 	char c = 'a';
-// 	printf("%c", ft_toupper(c));
-// 	return 0;
-// }

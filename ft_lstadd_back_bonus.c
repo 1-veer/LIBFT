@@ -12,20 +12,17 @@
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *temp;   //using a temp so we don't loose the refernce to our head (first link)
-    
-    if(!lst || !new)
-        return ;
- 
-    //new->next = NULL;  //initialise new->next with null since it'll be the last node anyways . n7ydoha hitach new given as paramter t9dr tkoun a pointer to a node deja initialised , y3ni next dyalha node akher ghir hna bghinaha tkoun lkhra f list dyalna , donc makahsnach nbdlo next dyalha
+	t_list	*temp;
 
-    if (*lst == NULL) 
-        *lst = new;  
-    else
-    {
-        temp = ft_lstlast(*lst);  
-        temp->next = new; 
-    }
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{
+		temp = ft_lstlast(*lst);
+		temp->next = new;
+	}
 }
